@@ -18,9 +18,9 @@ shinyServer(function(input, output) {
     pl <- ggplot(data = Rice_data,
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted
-                 aes_string(x=input$Trait_1,
+                 aes_string(x="Seed width",
                             y="Seed length",
-                            color="Region"
+                            color=input$Region
                  )
     )
     
