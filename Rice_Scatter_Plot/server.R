@@ -16,7 +16,7 @@ shinyServer(function(input, output) {
     
     
     # set up the plot
-    pl <- ggplot(data = Rice_data %>% filter(input$Option_2 <= input$Slide),
+    pl <- ggplot(data = Rice_data %>% filter(`Amylose content` <= input$Slide),
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted
                  aes_string(x=input$Option_1,
