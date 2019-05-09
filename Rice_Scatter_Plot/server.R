@@ -1,6 +1,10 @@
 
 library(shiny)
 library(ggplot2)
+library(tidyverse)
+
+Rice_data <- read_csv("/home/ubuntu/Assignments/Shiny Web App/Rice_Scatter_Plot/RiceDiversity.44K.MSU6.Phenotypes.csv")
+
 
 # Define server logic required to draw a boxplot
 shinyServer(function(input, output) {
