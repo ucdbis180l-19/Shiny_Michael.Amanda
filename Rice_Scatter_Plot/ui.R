@@ -16,8 +16,8 @@ shinyUI(fluidPage(
   # Application title
   titlePanel("Rice Data"),
   helpText("This application creates a scatterplot to show relationships between",
-           "rice seed and plant characteristics.  Please use the radio boxes below to choose two traits to plot",
-           "and an additional parameter to color"),
+           "rice seed, plant characteristics, and amylose content.  Please use the options below to choose two traits to plot,",
+           "a maximum amylose content, and an additional parameter to color"),
   
  
   sidebarLayout(
@@ -31,16 +31,15 @@ shinyUI(fluidPage(
     
       radioButtons("Option_2",
                    "Choose Plant Trait:",
-                   c("`Amylose content`",
+                   c(
                      "`Plant height`",
                      "`Panicle length`")),
       sliderInput("Slide",
-                  "Choose maximum:",
+                  "Choose maximum Amylose Content:",
                   0,
                   50,
-                  c("`Amylose content`",
-                    "`Plant height`",
-                    "`Panicle length`")),
+                  "`Amylose content`"
+                    ),
       
       radioButtons("Color", #the input variable that the value will go into
                    "Choose additional parameter (color):",
