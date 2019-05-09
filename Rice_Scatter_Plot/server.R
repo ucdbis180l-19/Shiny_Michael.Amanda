@@ -18,13 +18,13 @@ shinyServer(function(input, output) {
     pl <- ggplot(data = iris,
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted
-                 aes_string(x="Species",
-                            y=input$trait,
-                            fill="Species"
+                 aes_string(x="Traits",
+                            y=input$Species,
+                            fill="Traits"
                  )
     )
     
     # draw the boxplot for the specified trait
-    pl + geom_violin()
+    pl + geom_boxplot()
   })
 })
