@@ -23,9 +23,15 @@ shinyUI(fluidPage(
     sidebarPanel(
        radioButtons("Region", #the input variable that the value will go into
                    "Choose region:",
-                   c("Europe",
+                   c("Africa",
+                     "America",
+                     "`C Asia`",
                      "`E Asia`",
-                     "Pacific"
+                     "Europe",
+                     "`Mid East`",
+                     "Pacific",
+                     "`S Asia`",
+                     "`SE Asia`"
                      )
     )),
     
