@@ -15,16 +15,16 @@ shinyServer(function(input, output) {
   output$boxPlot <- renderPlot({
     
     # set up the plot
-    pl <- ggplot(data = iris,
+    pl <- ggplot(data = Rice_data,
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted
-                 aes_string(x="Sepal.length",
-                            y="Sepal.Length",
-                            fill=input$Species
+                 aes_string(x=input$Trait_1,
+                            y="Seed length",
+                            color="Region"
                  )
     )
     
     # draw the boxplot for the specified trait
-    pl + geom_boxplot()
+    pl + geom_point()
   })
 })
