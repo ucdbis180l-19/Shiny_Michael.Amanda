@@ -21,12 +21,12 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       radioButtons("trait", #the input variable that the value will go into
-                   "Choose a trait to display:",
-                   c("Sepal.Length",
-                     "Sepal.Width",
-                     "Petal.Length",
-                     "Petal.Width")
+       radioButtons("Species", #the input variable that the value will go into
+                   "Choose a Species to display:",
+                   c("setosa",
+                     "versicolo",
+                     "virginica"
+                     )
     )),
     
     # Show a plot of the generated distribution
