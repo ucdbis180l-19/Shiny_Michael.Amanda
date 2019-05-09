@@ -35,10 +35,12 @@ shinyUI(fluidPage(
                      "`Plant height`",
                      "`Panicle length`")),
       sliderInput("Slide",
-                  "Choose cutoff:",
+                  "Choose maximum:",
                   0,
                   50,
-                  "`Amylose content`"),
+                  c("`Amylose content`",
+                    "`Plant height`",
+                    "`Panicle length`")),
       
       radioButtons("Color", #the input variable that the value will go into
                    "Choose additional parameter (color):",
