@@ -13,21 +13,25 @@ library(shiny)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("Iris Data"),
+  helpText("This application creates a boxplot to show difference between",
+           "iris species.  Please use the radio box below to choose a trait",
+           "for plotting"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       sliderInput("bins",
-                   "Number of bins:",
-                   min = 1,
-                   max = 50,
-                   value = 30)
-    ),
+       radioButtons("trait", #the input variable that the value will go into
+                   "Choose a trait to display:",
+                   c("Sepal.Length",
+                     "Sepal.Width",
+                     "Petal.Length",
+                     "Petal.Width")
+    )),
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("distPlot")
+       plotOutput("boxPlot")
     )
   )
 ))
