@@ -14,14 +14,14 @@ shinyServer(function(input, output) {
   
   output$scatterPlot <- renderPlot({
   
-   
+    table_input$Region <- subset(Rice_data, Region==input$Region)
     # set up the plot
-    pl <- ggplot(data = Rice_data,
+    pl <- ggplot(data = table_input$Region,
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted
-                 aes_string(x="`Seed width`",
-                            y="`Seed length`",
-                            color=input$Region
+                 aes(x=`Seed width`,
+                     y=`Seed length`
+                            
         
                  )
     )
