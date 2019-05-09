@@ -25,6 +25,6 @@ shinyServer(function(input, output) {
     )
     
     # draw the boxplot for the specified trait
-    pl + geom_boxplot()
+    pl + geom_violin()
   })
 })
