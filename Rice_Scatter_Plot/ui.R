@@ -22,7 +22,7 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel(
        radioButtons("Region", #the input variable that the value will go into
-                   "Choose region:",
+                   "Choose Region:",
                    c("Africa",
                      "America",
                      "`C Asia`",
@@ -37,7 +37,7 @@ shinyUI(fluidPage(
     
     # Show a plot of the generated distribution
     mainPanel(
-       plotOutput("boxPlot")
+       plotOutput("scatterPlot")
     )
   )
 ))

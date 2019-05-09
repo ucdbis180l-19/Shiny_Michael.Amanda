@@ -12,15 +12,17 @@ shinyServer(function(input, output) {
   #     when inputs change
   #  2) Its output type is a plot
   
-  output$boxPlot <- renderPlot({
-    
+  output$scatterPlot <- renderPlot({
+  
+   
     # set up the plot
     pl <- ggplot(data = Rice_data,
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted
-                 aes_string(x="Seed width",
-                            y="Seed length",
+                 aes_string(x="`Seed width`",
+                            y="`Seed length`",
                             color=input$Region
+        
                  )
     )
     
