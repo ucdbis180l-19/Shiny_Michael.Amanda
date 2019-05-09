@@ -25,13 +25,13 @@ shinyUI(fluidPage(
                    "Choose Region:",
                    c("Africa",
                      "America",
-                     "`C Asia`",
-                     "`E Asia`",
+                     "C Asia",
+                     "E Asia",
                      "Europe",
-                     "`Mid East`",
+                     "Mid East",
                      "Pacific",
-                     "`S Asia`",
-                     "`SE Asia`"
+                     "S Asia",
+                     "SE Asia"
                      )
     )),
     
