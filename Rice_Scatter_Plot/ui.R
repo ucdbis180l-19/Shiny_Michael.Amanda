@@ -33,7 +33,18 @@ shinyUI(fluidPage(
                      "S Asia",
                      "SE Asia"
                      )
-    )),
+    ),
+      radioButtons("Option_1",
+                   "Choose First Trait:",
+                   c("Seed length",
+                     "Seed width")),
+    
+      radioButtons("Option_2",
+                   "Choose Second Trait:",
+                   c("Amylose content",
+                     "Plant height",
+                     "Panicle length"))
+    ),
     
     # Show a plot of the generated distribution
     mainPanel(
