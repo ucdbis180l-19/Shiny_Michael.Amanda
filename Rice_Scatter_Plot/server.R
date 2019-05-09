@@ -20,8 +20,8 @@ shinyServer(function(input, output) {
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted
                  aes_string(x=input$Option_1,
-                            y=input$Option_2, 
-                            color=input$Region
+                            y=input$Option_2
+                            
                             
                             
                  )

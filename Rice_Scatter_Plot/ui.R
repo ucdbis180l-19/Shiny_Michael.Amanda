@@ -8,6 +8,7 @@
 #
 
 library(shiny)
+library(tidyverse)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
@@ -36,14 +37,14 @@ shinyUI(fluidPage(
     ),
       radioButtons("Option_1",
                    "Choose First Trait:",
-                   c("Seed length",
-                     "Seed width")),
+                   c("`Seed length`",
+                     "`Seed width`")),
     
       radioButtons("Option_2",
                    "Choose Second Trait:",
-                   c("Amylose content",
-                     "Plant height",
-                     "Panicle length"))
+                   c("`Amylose content`",
+                     "`Plant height`",
+                     "`Panicle length`"))
     ),
     
     # Show a plot of the generated distribution
