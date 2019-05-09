@@ -19,7 +19,7 @@ shinyUI(fluidPage(
            "rice seed and plant characteristics.  Please use the radio boxes below to choose two traits to plot",
            "and an additional parameter to color"),
   
-  # Sidebar with a slider input for number of bins 
+ 
   sidebarLayout(
     sidebarPanel(
        
@@ -34,6 +34,12 @@ shinyUI(fluidPage(
                    c("`Amylose content`",
                      "`Plant height`",
                      "`Panicle length`")),
+      sliderInput("Slide",
+                  "Choose cutoff:",
+                  0,
+                  50,
+                  "`Amylose content`"),
+      
       radioButtons("Color", #the input variable that the value will go into
                    "Choose additional parameter (color):",
                    c("Region",
