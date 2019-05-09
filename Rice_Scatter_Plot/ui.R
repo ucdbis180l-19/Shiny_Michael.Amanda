@@ -21,11 +21,11 @@ shinyUI(fluidPage(
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       radioButtons("Species", #the input variable that the value will go into
-                   "Choose a Species to display:",
-                   c("setosa",
-                     "versicolo",
-                     "virginica"
+       radioButtons("Trait_1", #the input variable that the value will go into
+                   "Choose first trait:",
+                   c("Plant height",
+                     "Seed length",
+                     "Flag leaf length"
                      )
     )),
     
