@@ -15,37 +15,33 @@ shinyUI(fluidPage(
   
   # Application title
   titlePanel("Rice Data"),
-  helpText("This application creates a boxplot to show difference between",
-           "iris species.  Please use the radio box below to choose a trait",
-           "for plotting"),
+  helpText("This application creates a scatterplot to show relationships between",
+           "rice seed and plant characteristics.  Please use the radio boxes below to choose two traits to plot",
+           "and an additional parameter to color"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       radioButtons("Region", #the input variable that the value will go into
-                   "Choose Region:",
-                   c("Africa",
-                     "America",
-                     "C Asia",
-                     "E Asia",
-                     "Europe",
-                     "Mid East",
-                     "Pacific",
-                     "S Asia",
-                     "SE Asia"
-                     )
-    ),
+       
       radioButtons("Option_1",
-                   "Choose First Trait:",
+                   "Choose Seed Trait:",
                    c("`Seed length`",
-                     "`Seed width`")),
+                     "`Seed width`",
+                     "`Seed volume`")),
     
       radioButtons("Option_2",
-                   "Choose Second Trait:",
+                   "Choose Plant Trait:",
                    c("`Amylose content`",
                      "`Plant height`",
-                     "`Panicle length`"))
-    ),
+                     "`Panicle length`")),
+      radioButtons("Color", #the input variable that the value will go into
+                   "Choose additional parameter (color):",
+                   c("Region",
+                     "`Panicle fertility`",
+                     "`Brown rice surface area`"
+                   )
+      
+      )),
     
     # Show a plot of the generated distribution
     mainPanel(
