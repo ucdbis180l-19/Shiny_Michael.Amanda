@@ -18,9 +18,9 @@ shinyServer(function(input, output) {
     pl <- ggplot(data = iris,
                  #Use aes_string below so that input$trait is interpreted
                  #correctly.  The other variables need to be quoted
-                 aes_string(x="Traits",
-                            y=input$Species,
-                            fill="Traits"
+                 aes_string(x="Sepal.length",
+                            y="Sepal.Length",
+                            fill=input$Species
                  )
     )
     
