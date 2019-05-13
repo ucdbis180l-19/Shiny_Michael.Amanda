@@ -2,9 +2,15 @@
 library(shiny)
 library(ggplot2)
 library(tidyverse)
+library(rsconnect)
 
+<<<<<<< HEAD
 Rice_data<-read_csv("RiceDiversity.44K.MSU6.Phenotypes.csv")
                     
+=======
+Rice_data <- read_csv("./RiceDiversity.44K.MSU6.Phenotypes.csv")
+
+>>>>>>> b7ae15c33a0b2546fe9158a57ecd6318948e7fcd
 
 # Define server logic required to draw a boxplot
 shinyServer(function(input, output) {
